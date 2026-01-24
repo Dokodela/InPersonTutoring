@@ -1026,7 +1026,7 @@
                             <div class="checkmark">✓</div>
                             <div class="module-code">SSTA031</div>
                             <div class="module-price">R150/month</div>
-                            <div class="module-note">Advanced Stats</div>
+                            <div class="module-note">Time Series Analysis</div>
                         </div>
                         <div class="module-card" data-module="SSTA032" data-price="150" data-tutor="Lufuno">
                             <div class="checkmark">✓</div>
@@ -1038,13 +1038,25 @@
                             <div class="checkmark">✓</div>
                             <div class="module-code">SSTB031</div>
                             <div class="module-price">R200/month</div>
-                            <div class="module-note">Stats B</div>
+                            <div class="module-note">Applied Linear Regression</div>
                         </div>
                         <div class="module-card" data-module="SSTB032" data-price="200" data-tutor="Lufuno">
                             <div class="checkmark">✓</div>
-                            <div class="module-code">SSTB032</div>
+                            <div class="module-code">SSTC032</div>
                             <div class="module-price">R200/month</div>
                             <div class="module-note">Stats B</div>
+                        </div>
+                        <div class="module-card" data-module="SCOB031" data-price="150" data-tutor="Mogau">
+                            <div class="checkmark">✓</div>
+                            <div class="module-code">SCOB031</div>
+                            <div class="module-price">R150/month</div>
+                            <div class="module-note">Operating Systems</div>
+                        </div>
+                        <div class="module-card" data-module="SCOB032" data-price="150" data-tutor="Mogau">
+                            <div class="checkmark">✓</div>
+                            <div class="module-code">SCOB032</div>
+                            <div class="module-price">R150/month</div>
+                            <div class="module-note">Computer Networks</div>
                         </div>
                     </div>
                     <div class="combo-highlight">
@@ -1110,6 +1122,10 @@
             'Lenyaks': {
                 number: '27767912238',
                 phone: '0767912238'
+            },
+            'Mogau': {
+                number: '27792743603',
+                phone: '0792743603'
             }
         };
         
@@ -1130,7 +1146,9 @@
             'SMTA021/022': ['SMTA021', 'SMTA022'],
             'SCOA021/022': ['SCOA021', 'SCOA022'],
             'SSTA021/022': ['SSTA021', 'SSTA022'],
-            'SSTA031+SSTB031': ['SSTA031', 'SSTB031']
+            'SSTA031+SSTB031': ['SSTA031', 'SSTB031'],
+            'SAPA021/022': ['SAPA021', 'SAPA022'],
+            'SCOB031/032': ['SCOB031', 'SCOB032']
         };
         
         // Initialize the page
@@ -1424,10 +1442,10 @@
             message += `💰 ${totalPrice}\n`;
             message += `👨‍🏫 Preferred Tutor: ${tutorName}\n\n`;
             message += `Please send me more information about:\n`;
-            message += `- Available time slots\n`;
+            message += `- Attending time slots\n`;
             message += `- Payment methods\n`;
             message += `- Session scheduling\n`;
-            message += `- Tutor qualifications`;
+            
             
             // Update button
             whatsappBtn.href = `https://wa.me/${selectedTutor.number}?text=${encodeURIComponent(message)}`;
